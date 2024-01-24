@@ -20,57 +20,57 @@
 <body>
     <div class="bgc d-flex justify-content-center align-items-center">
         <div class="container">
-            <div class="row chat-app">
-                <section class="col-4 chat-bar">
-                    <!-- profilo utente -->
-                    <div class="profile-user border block">
-            
-                    </div>
-                    <!-- messaggio -->
-                    <div class="notifica border block">
-
-                    </div>
-                    <!-- la barra di ricerca dei contatti -->
-                    <div class="search-chat border block">
-
-                    </div>
-                    <div class="chat">
-                        <div class="list-group">
-                            <!-- La lista di contatti dell'utente -->
-                            <!-- TODO fare un v-for in questo punto -->
-                            <button type="button" class="list-group-item list-group-item-action list-group-heigth text-align-center">
-                                <picture class="d-flex">
-                                    <img class="list-group-img rounded-circle " src="img/avatar_1.jpg" alt="">
-                                    <div class="ps-3">
-                                        <span>nome</span>
-                                        <span>messaggio</span>
-                                    </div>
-                                </picture>
-                            </button>
+            <div id="root">
+                <div class="row chat-app ">
+                    <section class="col-4 chat-bar padding-0 d-flex flex-column">
+                        <!-- profilo utente -->
+                        <div class="profile-user border block">
                 
                         </div>
-                    </div>
+                        <!-- messaggio -->
+                        <div class="notifica border block">
 
-                </section>
-                <!-- parte dove si legge la chat con un determitato contattto -->
-                <section class="col-8 chat-contact">
-                    <!-- profilo del contatto -->
-                    <div class="profile-user border block">
+                        </div>
+                        <!-- la barra di ricerca dei contatti -->
+                        <div class="search-chat border block">
 
-                    </div>
-                    <!-- chat effettiva con tutti i messaggi riecevuti e inviati -->
-                    <div class="chat block border">
+                        </div>
+                        <div class="chats">
+                            <div class="list-group">
+                                <!-- La lista di contatti dell'utente -->
+                                <!-- TODO fare un v-for in questo punto -->
+                                <button v-for="contact in data.contacts" type="button" class="list-group-item list-group-item-action list-group-heigth">
+                                    <picture class="d-flex">
+                                        <img class="list-group-img rounded-circle " src="img/avatar_1.jpg" alt="">
+                                        <div class="ps-3">
+                                            <span>{{contact.name}}</span>
+                                            <span>messaggio</span>
+                                        </div>
+                                    </picture>
+                                </button>
+                    
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <!-- parte dove si legge la chat con un determitato contattto -->
+                    <section class="col-8 chat-contact padding-0 d-flex flex-column">
+                        <!-- profilo del contatto -->
+                        <div class="profile-user">
 
-                    </div>
-                    <!-- zona di scrittura di un nuovo messaggio -->
-                    <div class="messange-bar border block">
+                        </div>
+                        <!-- chat effettiva con tutti i messaggi riecevuti e inviati -->
+                        <div class="chat">
 
-                    </div>
-                </section>
+                        </div>
+                        <!-- zona di scrittura di un nuovo messaggio -->
+                        <div class="messange-bar">
 
+                        </div>
+                    </section>
+                </div>
             </div>
         </div>
-
     </div>
     
 </body>

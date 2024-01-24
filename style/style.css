@@ -6,6 +6,12 @@
     height: 100vh;
 }
 
+.padding-0{
+    padding-right: 0;
+    padding-left: 0;
+}
+
+/* ! chat-bar */
 .chat-app{
     height: 850px;
     background-color: #fff;
@@ -14,12 +20,34 @@
     height: 100px;
 }
 
+.list-group{
+    flex-grow: 1;
+    background-color: #fff;
+}
+
 .list-group-heigth{
     height: 70px;
     width: 100%;
 }
 
 .list-group-img{
-    width: 15%;
+    width: 10%;
     height: auto;
+}
+
+/* ! chat-contact */
+
+.profile-user{
+    height: 50px;
+    background-color: dodgerblue;
+}
+
+.chat{
+    flex-grow: 1;
+    background-color: lightslategray;    
+}
+
+.messange-bar{
+    height: 50px;
+    background-color: goldenrod;
 }
