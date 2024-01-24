@@ -1,0 +1,25 @@
+:root{
+    --bs-border-radius: 0; /* modifico il border radius delle liste */
+}
+.bgc{
+    background-image: linear-gradient(#009489 , #D7D9DA);
+    height: 100vh;
+}
+
+.chat-app{
+    height: 850px;
+    background-color: #fff;
+}
+.block{
+    height: 100px;
+}
+
+.list-group-heigth{
+    height: 70px;
+    width: 100%;
+}
+
+.list-group-img{
+    width: 15%;
+    height: auto;
+}
