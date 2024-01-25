@@ -23,9 +23,9 @@
     <div id="root" class="bgc h-100 d-flex justify-content-center align-items-center">
         <main class="container bg-white">
             <div class="row h-100">
-                <section id="chat-bar" class="col-4 h-100 padding-0 d-flex flex-column">
+                <section id="chat-bar" class="col-4 h-100 padding-0 d-flex flex-column border-end">
                     <!-- profilo utente -->
-                    <div id="profile-user" class="flex-shrink-0 d-flex justify-content-center">
+                    <div id="profile-user" class="flex-shrink-0 d-flex justify-content-between bgc-lightgrey">
                         <div class="media">
                             <figure>
                                 <img :src="getAvatarUrl(user)" :alt="user.name">
@@ -33,7 +33,9 @@
                             <div class="media-text">{{user.name}}</div>
                         </div>
                         <div class="w-25 text-muted d-flex justify-content-around align-items-center">
-                            
+                            <i class="fa-solid fa-circle-notch" role="button"></i>
+                            <i class="fa-solid fa-comment-alt" role="button"></i>
+                            <i class="fa-solid fa-ellipsis-v" role="button"></i>
                         </div>
                     </div>
                     <!-- notifiche -->
@@ -41,7 +43,7 @@
 
                     </div>
                     <!-- la barra di ricerca -->
-                    <div id="search-chat" class="p-2 flex-shrink-0">
+                    <div id="search-chat" class="p-2 flex-shrink-0 bgc-lightgrey">
                         <i class="fa-solid fa-search text-muted"></i>
                         <input type="text" class="w-100" placeholder="Cerca...">
                     </div>
@@ -67,7 +69,7 @@
                 <!-- parte dove si legge la chat con un determitato contattto -->
                 <section id="chat-contact" class="col-8 h-100 padding-0 d-flex flex-column">
                     <!-- profilo del contatto -->
-                    <header class="profile-user flex-shrink-0 d-flex justify-content-between">
+                    <header class="profile-user flex-shrink-0 d-flex justify-content-between bgc-lightgrey">
                         <div class="media">
                             <figure>
                                 <img src="img/avatar_1.jpg" alt="">
@@ -81,7 +83,7 @@
                         </div>
                     </header>
                     <!-- chat effettiva con tutti i messaggi riecevuti e inviati -->
-                    <section class="flex-grow-1 overflow-auto">
+                    <section class="flex-grow-1 overflow-auto bg-chat">
                         <ul class="px-3">
                             <li class="chat-container p-3 sent">
                                 <div class="chat p-2 rounded-3">
@@ -96,16 +98,16 @@
                         </ul>
                     </section>
                     <!-- zona di scrittura di un nuovo messaggio -->
-                    <footer class="messange-bar flex-shrink-0 container-fluid">
+                    <footer class="messange-bar flex-shrink-0 container-fluid bgc-grey">
                         <div class="row h-100 align-items-center">
                             <div class="col-1 d-flex justify-content-center">
-                                <i class="fa-regular fa-smile text-muted" role="button"></i>
+                                <i class="fa-regular fa-smile text-muted fa-xl" role="button"></i>
                             </div>
                             <div class="col-10">
                                 <input type="text" class="form-control">
                             </div>
                             <div class="col-1 d-flex justify-content-center">
-                                <i class="fa-solid fa-microphone text-mute" role="button"></i>
+                                <i class="fa-solid fa-microphone text-mute fa-xl" role="button"></i>
                             </div>
                         </div>
                     </footer>

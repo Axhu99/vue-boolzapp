@@ -1,10 +1,7 @@
 :root{
     --bs-border-radius: 0; /* modifico il border radius delle liste */
 }
-.bg-body{
-    height: 100vh;
-    background-image: linear-gradient(#009489 15% , #D7D9DA 15%);
-}
+
 
 #root .container {
     height: 90%;
@@ -15,17 +12,35 @@
     padding-left: 0;
 }
 
+/* ? background */
+
+.bg-body{
+    height: 100vh;
+    background-image: linear-gradient(#009489 15% , #D7D9DA 15%);
+}
+
+.bg-chat{
+    background-image: url("../img/mine.jpg");
+}
+
+.bgc-grey{
+    background-color: #EEE5DC;
+}
+
+.bgc-lightgrey{
+    background-color: #EBE9EB;
+}
+
 /* ! chat-bar */
 
 #profile-user,
 #search-chat{
     height: 70px;
-    background-color: goldenrod;
 }
 
 #notifications{
     height: 80px;
-    background-color: greenyellow;
+    background-color: #8ADAFC;
 }
 
 .media{
@@ -94,11 +109,11 @@
 }
 
 .chat-container.sent .chat{
-    background-color: green;
+    background-color: #D7F8BD;
 }
 
 .chat-container.received .chat{
-    background-color: grey;
+    background-color: #FFFEFF;
 }
 .chat-container .chat p{
     margin-bottom: 0;
