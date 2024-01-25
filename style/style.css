@@ -1,9 +1,13 @@
 :root{
     --bs-border-radius: 0; /* modifico il border radius delle liste */
 }
-.bgc{
-    background-image: linear-gradient(#009489 , #D7D9DA);
+.bg-body{
     height: 100vh;
+    background-image: linear-gradient(#009489 15% , #D7D9DA 15%);
+}
+
+#root .container {
+    height: 90%;
 }
 
 .padding-0{
@@ -12,15 +16,20 @@
 }
 
 /* ! chat-bar */
-.chat-app{
-    height: 850px;
-    background-color: #fff;
-}
-.block{
-    height: 100px;
+
+#profile-user,
+#search-chat{
+    height: 70px;
+    background-color: goldenrod;
 }
 
-.list-group{
+#notifications{
+    height: 80px;
+    background-color: greenyellow;
+}
+
+
+/* .list-group{
     flex-grow: 1;
     background-color: #fff;
 }
@@ -34,20 +43,15 @@
     width: 10%;
     height: auto;
 }
-
+ */
 /* ! chat-contact */
 
-.profile-user{
-    height: 50px;
+#chat-contact header,
+#chat-contact footer{
+    height: 70px;
     background-color: dodgerblue;
 }
 
 .chat{
-    flex-grow: 1;
     background-color: lightslategray;    
-}
-
-.messange-bar{
-    height: 50px;
-    background-color: goldenrod;
 }
