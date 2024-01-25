@@ -28,31 +28,31 @@
                     <div id="profile-user" class="flex-shrink-0 d-flex justify-content-center">
                         <div class="media">
                             <figure>
-                                <img src="img/avatar_io.jpg" alt="">
+                                <img :src="getAvatarUrl(user)" :alt="user.name">
                             </figure>
-                            <div class="media-text">IO</div>
+                            <div class="media-text">{{user.name}}</div>
                         </div>
                         <div class="w-25 text-muted d-flex justify-content-around align-items-center">
                             
                         </div>
                     </div>
-                    <!-- messaggio -->
+                    <!-- notifiche -->
                     <div id="notifications" class="flex-shrink-0">
 
                     </div>
-                    <!-- la barra di ricerca dei contatti -->
+                    <!-- la barra di ricerca -->
                     <div id="search-chat" class="p-2 flex-shrink-0">
                         <i class="fa-solid fa-search text-muted"></i>
                         <input type="text" class="w-100" placeholder="Cerca...">
                     </div>
+                    <!-- lista delle chat -->
                     <div id="contact-list" class="flex-grow-1 overflow-auto">
                         <div class="list-group">
                             <!-- La lista di contatti dell'utente -->
-                            <!-- TODO fare un v-for in questo punto -->
-                            <button v-for="contact in data.contacts" type="button" class="list-group-item list-group-item-action list-group-heigth">
+                            <button v-for="contact in contacts" :key="contact.id" type="button" class="list-group-item list-group-item-action list-group-heigth">
                                 <div class="media d-flex">
                                     <figure>
-                                        <img class="list-group-img rounded-circle " src="img/avatar_1.jpg" alt=""> <!-- TODO rendere dinamico -->
+                                        <img class="list-group-img rounded-circle " :src="getAvatarUrl(contact)" :alt="contact.name">
                                     </figure>
                                     <div class="media-text">
                                         <div>{{contact.name}}</div>
