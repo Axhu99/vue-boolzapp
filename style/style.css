@@ -78,6 +78,28 @@
     /* background-color: dodgerblue; */
 }
 
-.chat{
-    background-color: lightslategray;    
+
+/* ! chat */
+
+.chat-container{
+    display: flex;
+}
+
+.chat-container.sent{
+    justify-content: flex-end;
+}
+
+.chat-container.received{
+    justify-content: flex-start;
+}
+
+.chat-container.sent .chat{
+    background-color: green;
+}
+
+.chat-container.received .chat{
+    background-color: grey;
+}
+.chat-container .chat p{
+    margin-bottom: 0;
 }
