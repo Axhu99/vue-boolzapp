@@ -75,7 +75,7 @@
 #chat-contact header,
 #chat-contact footer{
     height: 70px;
-    background-color: dodgerblue;
+    /* background-color: dodgerblue; */
 }
 
 .chat{
