@@ -52,6 +52,23 @@
     margin-bottom: 0;
 }
 
+#search-chat{
+    height: 50px;
+    position: relative;
+} 
+
+#search-chat .fa-search {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+}
+
+#search-chat input{
+    border: 0;
+    height: 100%;
+    padding-left: 50px;
+}
 
 /* .list-group{
     flex-grow: 1;
