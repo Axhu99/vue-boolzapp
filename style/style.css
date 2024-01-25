@@ -28,6 +28,30 @@
     background-color: greenyellow;
 }
 
+.media{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.media figure{
+    height: 70px;
+    padding: 0.5rem;
+    margin-bottom: 0;
+    flex-shrink: 0;
+}
+
+.media img{
+    height: 100%;
+    max-width: 100%;
+    border-radius: 50%;
+}
+
+.media .media-text{
+    margin-left: 0.5rem;
+    margin-bottom: 0;
+}
+
 
 /* .list-group{
     flex-grow: 1;
