@@ -85,14 +85,10 @@
                     <!-- chat effettiva con tutti i messaggi riecevuti e inviati -->
                     <section class="flex-grow-1 overflow-auto bg-chat">
                         <ul class="px-3">
-                            <li class="chat-container p-3 sent">
+
+                            <li v-for="message in contacts[0].messages" class="chat-container p-3" :class="message.status">
                                 <div class="chat p-2 rounded-3">
-                                    <p>messaggiiiiiiioooo</p>
-                                </div>
-                            </li>
-                            <li class="chat-container p-3 received">
-                                <div class="chat p-2 rounded-3">
-                                    <p>rispostaaaaaa</p>
+                                    <p>{{message.text}}</p>
                                 </div>
                             </li>
                         </ul>
