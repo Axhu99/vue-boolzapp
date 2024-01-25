@@ -33,7 +33,7 @@
                             <div class="media-text">IO</div>
                         </div>
                         <div class="w-25 text-muted d-flex justify-content-around align-items-center">
-                    
+                            
                         </div>
                     </div>
                     <!-- messaggio -->
@@ -50,11 +50,12 @@
                             <!-- La lista di contatti dell'utente -->
                             <!-- TODO fare un v-for in questo punto -->
                             <button v-for="contact in data.contacts" type="button" class="list-group-item list-group-item-action list-group-heigth">
-                                <div class="d-flex">
-                                    <img class="list-group-img rounded-circle " src="img/avatar_1.jpg" alt=""> <!-- TODO rendere dinamico -->
-                                    <div class="ps-3">
-                                        <span>{{contact.name}}</span>
-                                        <span>messaggio</span>
+                                <div class="media d-flex">
+                                    <figure>
+                                        <img class="list-group-img rounded-circle " src="img/avatar_1.jpg" alt=""> <!-- TODO rendere dinamico -->
+                                    </figure>
+                                    <div class="media-text">
+                                        <div>{{contact.name}}</div>
                                     </div>
                                 </div>
                             </button>
