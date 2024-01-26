@@ -100,7 +100,7 @@
                                 <i class="fa-regular fa-smile text-muted fa-xl" role="button"></i>
                             </div>
                             <div class="col-10">
-                                <input type="text" class="form-control">
+                                <input type="text" class="form-control" v-model.trim="newMessageText" @keyup.enter="()=>{addMessages()}">
                             </div>
                             <div class="col-1 d-flex justify-content-center">
                                 <i class="fa-solid fa-microphone text-mute fa-xl" role="button"></i>
