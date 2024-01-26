@@ -1,3 +1,4 @@
+//TODO invece di aprile la prima chat che trovo apro una schermata iniziale (come whatsapp web)
 
 const {createApp} = Vue;
 
@@ -9,8 +10,8 @@ const app = createApp({
             user,
             contacts,
             contact:{},
-            newMessageText: '',
-            searchContact: '',
+            newMessageText: '', //utilizzato quando viene scritto un nuovo messaggio
+            searchContact: '', //per cercare un contantto con i carratteri all'interno di questa stringa
         }
     },
 
@@ -38,8 +39,8 @@ const app = createApp({
         //creo un messaggio (oggetto) con tutte le caratterestiche 
         addMessage(messageStatus,messageText){
             const newMessage = {
-                id: 1,
-                date: '10/01/2020 15:30:55',
+                id: new Date().toISOString(),
+                date: new Date().toLocaleDateString(),
                 text: messageText,
                 status: messageStatus
             }
@@ -49,6 +50,7 @@ const app = createApp({
 
         //funzione che utilizzio per stampare ogni volta il messaggio e una risposta predefinita ('ok')
         addMessages(){
+            if(!this.newMessageText) return; //deve esserci un testo se no non invia nulla
             this.addMessage('sent',this.newMessageText);
             setTimeout(() =>{
                 this.addMessage('received','ok')        
