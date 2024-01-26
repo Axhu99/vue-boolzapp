@@ -45,13 +45,13 @@
                     <!-- la barra di ricerca -->
                     <div id="search-chat" class="p-2 flex-shrink-0 bgc-lightgrey">
                         <i class="fa-solid fa-search text-muted"></i>
-                        <input type="text" class="w-100" placeholder="Cerca...">
+                        <input type="text" class="w-100" placeholder="Cerca..." v-model.trim="searchContact">
                     </div>
                     <!-- lista delle chat -->
                     <div id="contact-list" class="flex-grow-1 overflow-auto">
                         <div class="list-group">
                             <!-- La lista di contatti dell'utente -->
-                            <button v-for="contact in contacts" :key="contact.id" type="button" class="list-group-item list-group-item-action list-group-heigth" @click="getContactById(contact.id)">
+                            <button v-for="contact in filteredContact" :key="contact.id" type="button" class="list-group-item list-group-item-action list-group-heigth" @click="getContactById(contact.id)">
                                 <div class="media d-flex">
                                     <figure>
                                         <img class="list-group-img rounded-circle " :src="getAvatarUrl(contact)" :alt="contact.name">

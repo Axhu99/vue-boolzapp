@@ -10,8 +10,18 @@ const app = createApp({
             contacts,
             contact:{},
             newMessageText: '',
+            searchContact: '',
         }
     },
+
+    computed:{
+        filteredContact(){
+            const searchTerm = this.searchContact.toLowerCase()
+            const filteredContact = this.contacts.filter(contact => contact.name.toLowerCase().includes(searchTerm));
+            return filteredContact;
+        }
+    },
+
     methods:{
         //restituicsce una scriga con dentro l' AVATAR delle elemento dato 
         getAvatarUrl({avatar}){
@@ -24,6 +34,7 @@ const app = createApp({
             return this.contact            
         },
 
+        //creo un messaggio (oggetto) con tutte le caratterestiche 
         addMessage(messageStatus,messageText){
             const newMessage = {
                 id: 1,
@@ -31,9 +42,11 @@ const app = createApp({
                 text: messageText,
                 status: messageStatus
             }
+            // push sull'arrey dei messaggi
             this.contact.messages.push(newMessage);
         },
 
+        //funzione che utilizzio per stampare ogni volta il messaggio e una risposta predefinita ('ok')
         addMessages(){
             this.addMessage('sent',this.newMessageText);
             setTimeout(() =>{
