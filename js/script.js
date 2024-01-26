@@ -31,7 +31,7 @@ const app = createApp({
 
         //metodo che mi restituisce il contatto con quel ID
         getContactById(id){
-            this.contact = this.contacts.find(contact => contact.id === id)
+            this.contact = this.filteredContact.find(contact => contact.id === id)
             return this.contact            
         },
 

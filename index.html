@@ -39,8 +39,22 @@
                         </div>
                     </div>
                     <!-- notifiche -->
-                    <div id="notifications" class="flex-shrink-0">
+                    <div id="notifications" class="flex-shrink-0 d-flex justify-content-between">
+                        <div class="media">
+                            <div class="media-icon">
+                                <i class="fa-solid fa-bell-slash"></i>
+                            </div>
+                            <div class="media-text">
+                                <div>Ricevi notifiche di nuovi messaggi</div>
+                                <div class="fs-6 text-decoration-underline" role="button">
+                                    <small>Attiva le notifiche desktop</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="close">
 
+                            <i class="fa-solid fa-x " role="button"></i>
+                        </div>
                     </div>
                     <!-- la barra di ricerca -->
                     <div id="search-chat" class="p-2 flex-shrink-0 bgc-lightgrey">
@@ -56,7 +70,7 @@
                                     <figure>
                                         <img class="list-group-img rounded-circle " :src="getAvatarUrl(contact)" :alt="contact.name">
                                     </figure>
-                                    <div class="media-text">
+                                    <div class="h6 media-text">
                                         <div>{{contact.name}}</div>
                                     </div>
                                 </div>
@@ -74,7 +88,11 @@
                             <figure>
                                 <img :src="getAvatarUrl(contact)" alt="">
                             </figure>
-                            <div class="media-text">{{contact.name}}</div>
+                            <div class="h6 media-text">{{contact.name}}
+                                <div class="mb-0 fw-light">
+                                    <small>Ultimo accesso:</small>
+                                </div>
+                            </div>
                         </div>
                         <div class="d-flex text-muted justify-content-around align-items-center me-3">
                             <i class="fa-solid fa-search ms-3"></i>
@@ -85,10 +103,10 @@
                     <!-- chat effettiva con tutti i messaggi riecevuti e inviati -->
                     <section class="flex-grow-1 overflow-auto bg-chat">
                         <ul class="px-3">
-
                             <li v-for="message in contact.messages" class="chat-container p-3" :class="message.status">
                                 <div class="chat p-2 rounded-3">
                                     <p>{{message.text}}</p>
+                                    <time :datetime="message.date">{{message.date}}</time>
                                 </div>
                             </li>
                         </ul>
