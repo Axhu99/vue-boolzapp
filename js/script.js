@@ -57,6 +57,12 @@ const app = createApp({
             },1000)
             this.newMessageText = '';
         },
+        
+        //eleminare un messaggio preciso con il suo ID
+        deleteMessage(id){
+            console.log(id)
+            this.contact.messages = this.contact.messages.filter(message => id !== message.id)
+        }
     },
 
 })
