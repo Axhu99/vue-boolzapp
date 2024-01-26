@@ -15,6 +15,7 @@ const app = createApp({
     },
 
     computed:{
+        //filter dell'array per trovare i contatti cercati nella search bar
         filteredContact(){
             const searchTerm = this.searchContact.toLowerCase()
             const filteredContact = this.contacts.filter(contact => contact.name.toLowerCase().includes(searchTerm));
